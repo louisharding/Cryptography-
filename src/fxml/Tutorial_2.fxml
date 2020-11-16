@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.Tutorial_2">
+   <children>
+      <AnchorPane id="Content" layoutX="17.0" layoutY="19.0" minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="566.0">
+         <children>
+            <Pane layoutX="6.0" layoutY="5.0" prefHeight="353.0" prefWidth="559.0">
+               <children>
+                  <HBox layoutX="130.0" layoutY="80.0" prefHeight="30.0" prefWidth="335.0">
+                     <children>
+                        <TextField fx:id="tf_Numbers" onKeyReleased="#display6DigitsOnLabel" prefHeight="25.0" prefWidth="232.0" promptText="Enter 6 digits pls" text="000001" />
+                        <Button mnemonicParsing="false" onAction="#workyOutyProblemMcSolvey" prefHeight="25.0" prefWidth="202.0" text="Check Number" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="130.0" layoutY="41.0" prefHeight="39.0" prefWidth="137.0" text="Enter 6 Digits:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_NumberValid" ellipsisString="................." layoutX="127.0" layoutY="137.0" lineSpacing="50.0" prefHeight="20.0" prefWidth="305.0" text="The number is (valid?)" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="319.0" layoutY="232.0" mnemonicParsing="false" onAction="#getSyndromes" prefHeight="25.0" prefWidth="145.0" text="Generate Syndrome" />
+                  <Label fx:id="lb_Syndrome" layoutX="250.0" layoutY="270.0" prefHeight="27.0" prefWidth="157.0" text="Syndrome Number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_Syndrome" layoutX="128.0" layoutY="231.0" prefHeight="27.0" prefWidth="191.0" promptText="Enter digits to make a syndrome" text="0000118435" />
+                  <Label fx:id="lb_TenDigits" layoutX="128.0" layoutY="110.0" prefHeight="21.0" prefWidth="302.0" text="(Entered Number)">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="127.0" layoutY="271.0" text="The Syndrome:">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
