@@ -44,8 +44,7 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="435.0" layoutY="194.0" mnemonicParsing="false" text="Button" />
-                        <Button layoutX="435.0" layoutY="235.0" mnemonicParsing="false" text="Button" />
+                        <fx:include source="Tutorial_4.fxml" />
                      </children>
                   </AnchorPane>
           </content>

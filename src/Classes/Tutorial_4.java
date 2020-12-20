@@ -1,60 +1,40 @@
 //SHA-1
 package Classes;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import javafx.fxml.FXML;
 import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
-
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+//Comment testing Git...
 
 
 public class Tutorial_4 extends MainController {
 
-private static String convertToHex(byte[] data) {
-    StringBuffer buf = new StringBuffer();
-    for (int i = 0; i < data.length; i++) {
-        int halfbyte = (data[i] >>> 4) & 0x0F;
-        int two_halfs = 0;
-        do {
-        if ((0 <= halfbyte) && (halfbyte <= 9))
-            buf.append((char) ('0' + halfbyte));
-        else
-            buf.append((char) ('a' + (halfbyte - 10)));
-            halfbyte = data[i] & 0x0F;
-        } while(two_halfs++ < 1);
-        }
-            return buf.toString();
-        }
-
-public static String SHA1(String text)
-        throws NoSuchAlgorithmException, UnsupportedEncodingException  {
-            MessageDigest md;
-            md = MessageDigest.getInstance("SHA-1");
-            byte[] sha1hash = new byte[40];
-            md.update(text.getBytes("iso-8859-1"), 0, text.length());
-            sha1hash = md.digest();
-        return convertToHex(sha1hash);
-        }
+    @FXML
+    public TextField tf_InputString;
+    @FXML
+    public Label lb_Result;
 
 
-public static void main(String[] args) throws IOException {
-        BufferedReader userInput = new BufferedReader (new InputStreamReader(System.in));
+    public void generateHash() throws NoSuchAlgorithmException {
+            MessageDigest myMd = MessageDigest.getInstance("SHA-1");
+            String textAsString = tf_InputString.getText();
 
-        System.out.println("Enter string:");
-        String rawString = userInput.readLine();
+            myMd.update(textAsString.getBytes());
 
-        try {
-            System.out.println("SHA1 hash of string: " + Tutorial_4.SHA1(rawString));
-        } catch (NoSuchAlgorithmException e) {
-        // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-        // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        }
+            byte[] digest = myMd.digest();
+            System.out.println(digest);
+
+            StringBuffer myHexString = new StringBuffer();
+
+            for(int i = 0; i < digest.length; i++){
+                myHexString.append(Integer.toHexString(0xFF & digest[i]));
+            }
+
+            lb_Result.setText("" + myHexString);
+            myHexString.delete(0, myHexString.length());
+    }
 
 
 }

@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import static javafx.application.Application.launch;
 
 
@@ -59,7 +58,6 @@ public class Tutorial_2 extends MainController{
                 (2*tenDidgits[3])+
                 (tenDidgits[4])+
                 (7*tenDidgits[5]))%11;
-
     }
 
     public void getNumber8(){
@@ -103,7 +101,6 @@ public class Tutorial_2 extends MainController{
         }
 
 
-
         for (int i = 0; i < 10; i++){
             s1 += tenDidgits[i];
             s2 += tenDidgits[i]*s2DecodeNums[i];
@@ -144,7 +141,6 @@ public class Tutorial_2 extends MainController{
         }
 
     }
-
 
 
 
