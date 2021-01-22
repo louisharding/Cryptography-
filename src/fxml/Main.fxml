@@ -51,7 +51,10 @@
         </Tab>
         <Tab text="T5">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="735.0">
+                     <children>
+                        <fx:include source="Tutorial_5.fxml" />
+                     </children></AnchorPane>
           </content>
         </Tab>
         <Tab text="T6">

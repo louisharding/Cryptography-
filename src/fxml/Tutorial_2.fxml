@@ -15,7 +15,7 @@
                   <HBox layoutX="130.0" layoutY="80.0" prefHeight="30.0" prefWidth="335.0">
                      <children>
                         <TextField fx:id="tf_Numbers" onKeyReleased="#display6DigitsOnLabel" prefHeight="25.0" prefWidth="232.0" promptText="Enter 6 digits pls" text="000001" />
-                        <Button mnemonicParsing="false" onAction="#workyOutyProblemMcSolvey" prefHeight="25.0" prefWidth="202.0" text="Check Number" />
+                        <Button mnemonicParsing="false" onAction="#solve" prefHeight="25.0" prefWidth="202.0" text="Check Number" />
                      </children>
                   </HBox>
                   <Label layoutX="130.0" layoutY="41.0" prefHeight="39.0" prefWidth="137.0" text="Enter 6 Digits:">

@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-//Comment testing Git...
+
 
 
 public class Tutorial_4 extends MainController {
@@ -15,7 +15,6 @@ public class Tutorial_4 extends MainController {
     public TextField tf_InputString;
     @FXML
     public Label lb_Result;
-
 
     public void generateHash() throws NoSuchAlgorithmException {
             MessageDigest myMd = MessageDigest.getInstance("SHA-1");
@@ -35,6 +34,4 @@ public class Tutorial_4 extends MainController {
             lb_Result.setText("" + myHexString);
             myHexString.delete(0, myHexString.length());
     }
-
-
 }

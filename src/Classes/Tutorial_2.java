@@ -30,7 +30,7 @@ public class Tutorial_2 extends MainController{
 
 
 
-    public void workyOutyProblemMcSolvey(){
+    public void solve(){
 
         for (int i = 0; i < 6; i ++){
             tenDidgits[i] = Integer.parseInt(String.valueOf(tf_Numbers.getText().charAt(i)));
